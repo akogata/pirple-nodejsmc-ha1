@@ -70,15 +70,19 @@ function unifiedServer (req, res) {
   })
 }
 
+// routing checks here
 let handlers = {}
 
+// optional input: name
 handlers.hello = (data, callback) => {
-  let name = 'stranger'
+  let name = 'stranger' // default name
   console.debug(data.queryStringObject)
   console.debug(data.headers)
-  if ('name' in data.queryStringObject) {
+  // Try to read 'name' from both query string and header
+  const PARAM_NAME = 'name'
+  if (PARAM_NAME in data.queryStringObject) {
     name = data.queryStringObject['name']
-  } else if ('name' in data.headers) {
+  } else if (PARAM_NAME in data.headers) {
     name = data.headers['name']
   }
   callback(200, { 'hello': name })
