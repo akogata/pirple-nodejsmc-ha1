@@ -23,7 +23,7 @@ Please create a simple "Hello World" API. Meaning:
 ## Configuration
 Configuration is stored in ./config.js, where one can change the environment name (dev/prod) and http/https port.
 
-## Running
+## Running - server
 After clonning the repo, one can run the application by executing:
 ```
 cd pirple-nodejsmc-ha1
@@ -42,3 +42,10 @@ $ NODE_ENV=production node index.js
 Http server listening on port 5000 now in production mode
 Https server listening on port 5001 now in production mode
 ```
+
+## Running - browser
+Assuming the default configuration (envName:development/port:3000), once the url `localhost:3000` is opened in the browser, an empty JSON is returned (status 404).
+The 'Hello World' API can be accessed by using `localhost:3000/hello`, which returns the expected greeting JSON.
+**Bonus**
+If a name is given, the API uses that:
+`localhost:3000/hello?name=john`
