@@ -1,7 +1,6 @@
 # pirple-nodejsmc-ha1
-The NodeJS masterclass - Home Assignment #1
 
-Homework Assignment #1
+## The NodeJS Master Class - Home Assignment #1 - Hello World API
 
 This is the first of several homework assignments you'll receive in this course. In order to receive your certificate of completion (at the end of this course) you must complete all the assignments and receive a passing grade. 
 
@@ -20,3 +19,13 @@ Please create a simple "Hello World" API. Meaning:
 1. It should be a RESTful JSON API that listens on a port of your choice. 
 
 2. When someone posts anything to the route /hello, you should return a welcome message, in JSON format. This message can be anything you want. 
+
+## Implementation
+Configuration is stored in ./config.js, where one can change the environment name (dev/prod) and http/https port.
+
+## Running
+After clonning the repo, one can run the application by executing:
+```
+cd pirple-nodejsmc-ha1
+node index.js
+```
