@@ -46,6 +46,14 @@ Https server listening on port 5001 now in production mode
 ## Running - browser
 Assuming the default configuration (envName:development/port:3000), once the url `localhost:3000` is opened in the browser, an empty JSON is returned (status 404).
 The 'Hello World' API can be accessed by using `localhost:3000/hello`, which returns the expected greeting JSON.
+
 **Bonus**
 If a name is given, the API uses that:
 `localhost:3000/hello?name=john`
+
+## Using curl
+`curl localhost:3000` ->  404
+`curl localhost:3000/hello' -> default greeting
+`curl localhost:3000/hello?name=john' -> custom greeting, query string
+`curl localhost:3000/hello --header 'name=john'` -> custom greeting, header
+`curl localhost:3000/hello?name=john --header 'name=jack' -> custom greeting, query string has priority over header parameter
