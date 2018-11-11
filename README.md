@@ -53,11 +53,7 @@ If a name is given, the API uses that:
 
 ## Using curl
 `curl localhost:3000` ->  404
-
-`curl localhost:3000/hello' -> default greeting
-
-`curl localhost:3000/hello?name=john' -> custom greeting, query string
-
+`curl localhost:3000/hello` -> default greeting
+`curl localhost:3000/hello?name=john` -> custom greeting, query string
 `curl localhost:3000/hello --header 'name=john'` -> custom greeting, header
-
-`curl localhost:3000/hello?name=john --header 'name=jack' -> custom greeting, query string has priority over header parameter
+`curl localhost:3000/hello?name=john --header 'name=jack'` -> custom greeting, query string has priority over header parameter
